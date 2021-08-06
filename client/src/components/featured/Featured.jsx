@@ -5,6 +5,7 @@ import "./featured.scss";
 
 export default function Featured({ type, setGenre }) {
   const [content, setContent] = useState({});
+  
 
   useEffect(()=>{
     const getRandomContent = async ()=>{

@@ -16,6 +16,9 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
+import MovieCreationIcon from '@material-ui/icons/MovieCreation';
+import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 export default function Sidebar() {
   return (
@@ -68,20 +71,26 @@ export default function Sidebar() {
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
+          <h3 className="sidebarTitle">Creative Head</h3>
           <ul className="sidebarList">
+          <Link to="/newproduct" className="link">
             <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
+              <MovieCreationIcon className="sidebarIcon" />
+              Create Movies
             </li>
+          </Link>
+            <Link to="/newList" className="link">
             <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
+              <PlaylistAddIcon className="sidebarIcon" />
+              Create Lists
             </li>
+          </Link>
+          <Link to="/newUser" className="link">
             <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
+              <PersonAddIcon className="sidebarIcon" />
+              Create User
             </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
