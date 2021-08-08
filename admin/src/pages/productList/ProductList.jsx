@@ -1,14 +1,12 @@
 import "./productList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
-import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { MovieContext } from "../../context/movieContext/MovieContext";
 import { deleteMovie, getMovies } from "../../context/movieContext/apiCalls";
 
 export default function ProductList() {
-  const [data, setData] = useState(productRows);
   const {movies,dispatch} = useContext(MovieContext)
 
 
@@ -39,7 +37,7 @@ export default function ProductList() {
     { field: "genre", headerName: "Genre", width: 120 },
     { field: "year", headerName: "year", width: 120 },
     { field: "limit", headerName: "limit", width: 120 },
-    { field: "isSeries", headerName: "isSeries", width: 120 },
+    { field: "isSeries", headerName: "IsSeries", width: 120 },
     
     {
       field: "action",

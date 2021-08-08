@@ -35,7 +35,7 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/users">
+              {/* <Route path="/users">
                 <UserList />
               </Route>
               <Route path="/user/:userId">
@@ -43,7 +43,7 @@ function App() {
               </Route>
               <Route path="/newUser">
                 <NewUser />
-              </Route>
+              </Route> */}
               <Route path="/products">
                 <ProductList />
               </Route>
@@ -62,6 +62,15 @@ function App() {
               <Route path="/newlist">
                 <NewList />
               </Route>
+              <Route path="/users">
+                <UserList />
+              </Route>
+              {/* <Route path="/users/:usersId">
+                <Product />
+              </Route>
+              <Route path="/newuser">
+                <NewProduct />
+              </Route> */}
             </div>
           </>
         )}
