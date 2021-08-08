@@ -18,7 +18,6 @@ export default function ListList() {
     deleteList(id, dispatch)
   };
 
-  console.log(lists);
 
   const columns = [
     { field: "_id", headerName: "ID", width: 250 },
