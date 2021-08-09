@@ -17,8 +17,9 @@ const Home = ({type}) => {
             genre ? "&genre=" + genre : ""
           }`,{
             headers:{
-              token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZmM0NmUxMzJiMTEyMjczY2U5N2NiYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyODA2ODQ4NCwiZXhwIjoxNjI4NTAwNDg0fQ.PvBsKM7V9IFGwPmaLEURJpi5jEufw2ymIRcjcbDEUWE"
-            }
+              token:
+                "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
+            },
           }
         )
         setLists(res.data);

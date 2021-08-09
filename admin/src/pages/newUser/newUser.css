@@ -3,8 +3,9 @@
 }
 
 .newUserForm {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
+  margin: 20px;
 }
 
 .newUserItem {
