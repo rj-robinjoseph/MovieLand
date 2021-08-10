@@ -30,7 +30,7 @@ const UserReducer = (state, action) => {
           isFetching: false,
           error: false,
         };
-      case "CREATE_MOVIE_FAILURE":
+      case "CREATE_USER_FAILURE":
         return {
           ...state,
           isFetching: false,
