@@ -40,32 +40,61 @@ export default function Product() {
           </div>
       </div>
       <div className="productBottom">
-          <form className="productForm">
-          <div className="productFormLeft">
-            <label>Movie Title</label>
-            <input type="text" placeholder={movie.title} />
-            <label>Year</label>
-            <input type="text" placeholder={movie.year} />
-            <label>Genre</label>
-            <input type="text" placeholder={movie.genre} />
-            <label>Limit</label>
-            <input type="text" placeholder={movie.limit} />
-            <label>Trailer</label>
-            <input type="file" placeholder={movie.trailer} />
-            <label>Video</label>
-            <input type="file" placeholder={movie.video} />
-          </div>
-              <div className="productFormRight">
-                  <div className="productUpload">
-                      <img src={movie.img} alt="" className="productUploadImg" />
-                      <label for="file">
-                          <Publish/>
-                      </label>
-                      <input type="file" id="file" style={{display:"none"}} />
-                  </div>
-                  <button className="productButton">Update</button>
-              </div>
-          </form>
+      <form className="addProductForm">
+        <div className="addProductItem">
+          <label>Image</label>
+          <input type="file" id="img" name="img" />
+        </div>
+        <div className="addProductItem">
+          <label>Title Image</label>
+          <input type="file" id="imgTitle" name="imgTitle" />
+        </div>
+        <div className="addProductItem">
+          <label>Tumbnail Image</label>
+          <input type="file" id="imgSm" name="imgSm" />
+        </div>
+        <div className="addProductItem">
+          <label>Title</label>
+          <input type="text" placeholder="John Wick" name="title" />
+        </div>
+        <div className="addProductItem">
+          <label>Description</label>
+          <input type="text" placeholder="description" name="desc" />
+        </div>
+        <div className="addProductItem">
+          <label>Year</label>
+          <input type="text" placeholder="Year" name="year" />
+        </div>
+        <div className="addProductItem">
+          <label>Genre</label>
+          <input type="text" placeholder="Genre" name="genre" />
+        </div>
+        <div className="addProductItem">
+          <label>Duration</label>
+          <input type="text" placeholder="Duration" name="duration" />
+        </div>
+        <div className="addProductItem">
+          <label>Limit</label>
+          <input type="text" placeholder="Limit" name="limit" />
+        </div>
+        <div className="addProductItem">
+          <label>Is Series?</label>
+          <select name="isSeries" id="isSeries" >
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </div>
+        <div className="addProductItem">
+          <label>Trailer</label>
+          <input type="file" name="trailer" />
+        </div>
+        <div className="addProductItem">
+          <label>Video</label>
+          <input type="file" name="video" />
+        </div>
+        <button className="addProductButton" >Create</button>
+        
+      </form>
       </div>
     </div>
   );
