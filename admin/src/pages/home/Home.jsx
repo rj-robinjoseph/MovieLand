@@ -31,9 +31,9 @@ export default function Home() {
     const getStats = async ()=>{
       try{
        const res = await axios.get("/users/stats", {
-         headers:{
-           token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZmM0NmUxMzJiMTEyMjczY2U5N2NiYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyNzYzMDc1NCwiZXhwIjoxNjI4MDYyNzU0fQ.Qqu9Abin0P7SURz56bR2b0XMF05iKjs_qNit-o8IseM"
-         }
+        headers: {
+          token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+        },
        });
        const statsList = res.data.sort(function( a,b ) {
          return a._id - b._id;
@@ -52,7 +52,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <FeaturedInfo />
+      {/* <FeaturedInfo /> */}
       <Chart data={userStats} title="User Analytics" grid dataKey="New User"/>
       <div className="homeWidgets">
         <WidgetSm/>

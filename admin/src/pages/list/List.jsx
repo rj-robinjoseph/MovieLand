@@ -12,7 +12,7 @@ export default function List() {
   const listList = location.list;
 
   const [list, setList] = useState(null);
-  // const history = useHistory()
+  const history = useHistory()
   
   const { dispatch } = useContext(ListContext);
   const { movies, dispatch: dispatchMovie } = useContext(MovieContext);
@@ -36,7 +36,7 @@ export default function List() {
   const handleSubmit = (e) => {
     e.preventDefault();
     updateList(listList._id,list, dispatch);
-    // history.push("/lists")
+    history.push("/lists")
   };
 
   return (

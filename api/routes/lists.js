@@ -75,7 +75,8 @@ router.get("/", verify, async(req, res) => {
                     { $match: { type: typeQuery } },
                 ]);
             }
-        } else {
+        } 
+        else {
             list = await List.aggregate([{ $sample: { size: 10 } }]);
         }
         res.status(200).json(list);
@@ -83,5 +84,7 @@ router.get("/", verify, async(req, res) => {
         res.status(500).json(err);
     }
 });
+
+
 
 module.exports = router;
