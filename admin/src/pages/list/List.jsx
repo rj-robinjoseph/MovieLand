@@ -35,7 +35,7 @@ export default function List() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateList(list, dispatch);
+    updateList(listList._id,list, dispatch);
     // history.push("/lists")
   };
 
