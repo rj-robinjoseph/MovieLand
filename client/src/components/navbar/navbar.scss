@@ -30,6 +30,7 @@
         height: 40px;
         margin-top: 10px;
         margin-right: 40px;
+        filter: drop-shadow(5px 5px 5px #222);
 
         @include mobile {
           display: none;

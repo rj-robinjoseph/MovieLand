@@ -4,6 +4,9 @@
   height: 90vh;
   position: relative;
 
+.navbarmainlinks{
+  text-decoration: none;
+}
   .category {
     position: absolute;
     top: 80px;
@@ -13,7 +16,8 @@
     color: white;
     display: flex;
     align-items: center;
-
+    z-index: 10;
+    
     select {
       cursor: pointer;
       background-color: var(--main-color);
@@ -41,10 +45,13 @@
 
     img {
       width: 40vw;
+      filter: drop-shadow(5px 5px 5px #222);
     }
 
     .desc {
+      font-size: 16px;
       margin: 20px 0px;
+      filter: drop-shadow(5px 5px 5px #222);
 
       @include mobile {
         width: 60vw;

@@ -3,6 +3,7 @@ import { useRef } from "react"
 import { useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import "./register.scss"
+import Footer from "../../components/footer/Footer";
 
 export default function Register() {
   const [email, setEmail] = useState("")
@@ -66,6 +67,7 @@ export default function Register() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

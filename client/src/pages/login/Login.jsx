@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../authContext/AuthContext";
 import { login } from "../../authContext/apiCalls";
 import "./login.scss";
+import Footer from "../../components/footer/Footer";
 
 export default function Login() {
   const [email, setEmail]= useState("");
@@ -18,7 +19,7 @@ export default function Login() {
         <div className="wrapper">
           <img
             className="logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+            src="https://res.cloudinary.com/robinjoseph/image/upload/v1628619460/MovielandLogo_556d2be32a95caeed3d95826ed836f31_ppaayr.png"
             alt=""
           />
         </div>
@@ -38,6 +39,7 @@ export default function Login() {
           </small>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
