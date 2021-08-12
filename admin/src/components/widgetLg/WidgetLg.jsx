@@ -37,6 +37,7 @@ export default function WidgetLg() {
   
   return (
     <div className="productList">
+      <h3 className="widgetLgTitle">Last Updated Movies.</h3>
       <DataGrid
         rows={movies}
         disableSelectionOnClick
