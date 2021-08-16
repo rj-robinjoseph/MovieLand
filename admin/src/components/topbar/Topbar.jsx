@@ -20,7 +20,7 @@ export default function Topbar() {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">admin</span>
+          <span className="logo">MovieLand-admin</span>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
@@ -34,7 +34,7 @@ export default function Topbar() {
           <div className="topbarIconContainer">
             <Settings />
           </div>
-          <img onClick={logoutHandler} src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
+          <img onClick={logoutHandler} src="https://ih0.redbubble.net/image.618369215.1083/flat,1000x1000,075,f.u2.jpg" alt="" className="topAvatar" />
         </div>
       </div>
     </div>

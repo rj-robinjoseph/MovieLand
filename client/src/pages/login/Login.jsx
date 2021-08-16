@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../authContext/AuthContext";
 import { login } from "../../authContext/apiCalls";
 import "./login.scss";
-import Footer from "../../components/footer/Footer";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail]= useState("");
@@ -14,6 +14,7 @@ export default function Login() {
     login({email,password}, dispatch)
   }
   return (
+    <>
     <div className="login">
       <div className="top">
         <div className="wrapper">
@@ -31,7 +32,7 @@ export default function Login() {
           <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
           <button className="loginButton" onClick={handleLogin}>Sign In</button>
           <span>
-            New to Netflix? <b>Sign up now.</b>
+            New to Netflix? <Link to="/register" className="signup"><b>Sign up now.</b></Link>
           </span>
           <small>
             This page is protected by Google reCAPTCHA to ensure you're not a
@@ -39,7 +40,7 @@ export default function Login() {
           </small>
         </form>
       </div>
-      <Footer />
     </div>
+    </>
   );
 }
