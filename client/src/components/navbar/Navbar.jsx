@@ -38,7 +38,7 @@ const Navbar = () => {
           <span>KID</span>
           <Notifications className="icon" />
           <img
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1bdc9a33850498.56ba69ac2ba5b.png"
+            src="https://res.cloudinary.com/robinjoseph/image/upload/v1629368620/Movieland/1bdc9a33850498.56ba69ac2ba5b_wzbbxh.png"
             alt=""
           />
           <div className="profile">
