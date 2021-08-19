@@ -7,7 +7,7 @@ import { logout } from "../../authContext/AuthActions";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const {dispatch} = useContext(AuthContext)
+  const { dispatch, user } = useContext(AuthContext);
 
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
@@ -38,12 +38,13 @@ const Navbar = () => {
           <span>KID</span>
           <Notifications className="icon" />
           <img
-            src="https://res.cloudinary.com/robinjoseph/image/upload/v1629368620/Movieland/1bdc9a33850498.56ba69ac2ba5b_wzbbxh.png"
+            src={user.profilePic || "https://res.cloudinary.com/robinjoseph/image/upload/v1629368620/Movieland/1bdc9a33850498.56ba69ac2ba5b_wzbbxh.png"}
             alt=""
           />
           <div className="profile">
             <ArrowDropDown className="icon" />
             <div className="options">
+            <span>Hello, {user.username}</span>
               <span>Settings</span>
               <span onClick={()=>dispatch(logout())}>Logout</span>
             </div>

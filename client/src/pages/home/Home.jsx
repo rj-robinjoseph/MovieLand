@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import Featured from "../../components/featured/Featured";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import "./home.scss";
 import List from "../../components/list/List";
 import { useEffect, useState } from "react";
@@ -38,6 +39,10 @@ const Home = ({type}) => {
       <List list={list}/>
       ))};
       <Footer />
+      <MessengerCustomerChat
+        pageId="104803175250158"
+        appId="793496151321400"
+       />
     </div>
   );
 };
