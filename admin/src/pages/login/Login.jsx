@@ -15,27 +15,46 @@ export default function Login() {
 
   return (
     <div className="login">
-      <form className="loginForm">
-        <input
-          type="text"
-          placeholder="email"
-          className="loginInput"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          className="loginInput"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          className="loginButton"
-          onClick={handleLogin}
-          disabled={isFetching}
-        >
-          Login
-        </button>
-      </form>
+      <div className="logo">
+      <img 
+      className="logo_login"
+      src="https://res.cloudinary.com/robinjoseph/image/upload/v1628619460/MovielandLogo_556d2be32a95caeed3d95826ed836f31_ppaayr.png"
+       alt="" />
+      </div>
+    <div className="main">
+       <h1 className="sign">Login</h1>
+
+          <form id="login" method="post" action="#" className="form1">
+     
+
+              <input 
+              className="un"
+               type="text" 
+               placeholder="Email" 
+               required="required"
+               align="center"
+               onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <input
+              className="pass"
+               type="password" 
+               placeholder="Password" 
+               required="required" 
+               align="center"
+               onChange={(e) => setPassword(e.target.value)}
+              />
+              <button 
+              className="submit"
+              type="submit"
+              align="center"
+              onClick={handleLogin}
+              disabled={isFetching}
+              >
+              Let me in.
+            </button>
+           </form>
+      </div>
     </div>
   );
 }
