@@ -20,7 +20,12 @@ export default function Topbar() {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">MovieLand-admin</span>
+          {/* <span className="logo">MovieLand-admin</span> */}
+          <img
+          src="https://res.cloudinary.com/robinjoseph/image/upload/v1628619460/MovielandLogo_556d2be32a95caeed3d95826ed836f31_ppaayr.png"
+          alt="" 
+          style={{maxWidth: "20%", marginTop: "15px"}}
+          />
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
