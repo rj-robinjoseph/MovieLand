@@ -28,7 +28,7 @@ export default function UserList() {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImg" src={params.row.profilePic} alt="" />
+            <img className="userListImg" src={params.row.profilePic || "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"} alt="" />
             {params.row.username}
           </div>
         );

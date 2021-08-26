@@ -6,10 +6,13 @@ import {
   PhoneAndroid,
   Publish,
 } from "@material-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./user.css";
 
 export default function User() {
+  const location = useLocation();
+  const userList = location.user;
+
   return (
     <div className="user">
       <div className="userTitleContainer">
@@ -19,7 +22,7 @@ export default function User() {
         </Link>
       </div>
       <div className="userContainer">
-        <div className="userShow">
+        {/* <div className="userShow">
           <div className="userShowTop">
             <img
               src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -55,7 +58,7 @@ export default function User() {
               <span className="userShowInfoTitle">New York | USA</span>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="userUpdate">
           <span className="userUpdateTitle">Edit</span>
           <form className="newUserForm">

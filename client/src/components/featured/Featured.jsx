@@ -58,7 +58,7 @@ export default function Featured({ type, setGenre }) {
         </div>
       )}
      {isLoading ? (
-          <Skeleton type="custom" />
+          <Skeleton type="circle" />
         ) : (
       <img src={content.img} alt="" />
         

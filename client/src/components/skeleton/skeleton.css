@@ -89,11 +89,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 400px;
 }
 
 .custom {
   flex-direction: column;
-  margin-top: 400px;
 }
 
 .balls {
