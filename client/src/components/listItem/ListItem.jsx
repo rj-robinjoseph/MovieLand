@@ -8,13 +8,17 @@ import {
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Skeleton from "../skeleton/Skeleton";
+
 
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getMovie = async () => {
+      setIsLoading(true);
       try {
         const res = await axios.get("/movies/find/" + item, {
           headers: {
@@ -26,6 +30,7 @@ export default function ListItem({ index, item }) {
       } catch (err) {
         console.log(err);
       }
+      setIsLoading(false);
     };
     getMovie();
   }, [item]);
@@ -38,7 +43,11 @@ export default function ListItem({ index, item }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        {isLoading ? (
+          <Skeleton type="feed" />
+        ) : (
         <img src={movie?.imgSm} alt="" />
+        )}
         {isHovered && (
           <>
             <video src={movie.trailer} autoPlay={true} loop />

@@ -3,12 +3,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./featured.scss";
+import Skeleton from "../skeleton/Skeleton";
 
 export default function Featured({ type, setGenre }) {
   const [content, setContent] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getRandomContent = async () => {
+      setIsLoading(true);
       try {
         const res = await axios.get(`/movies/random?type=${type}`, {
           headers: {
@@ -20,6 +23,7 @@ export default function Featured({ type, setGenre }) {
       } catch (err) {
         console.log(err);
       }
+      setIsLoading(false);
     };
     getRandomContent();
   }, [type]);
@@ -53,7 +57,12 @@ export default function Featured({ type, setGenre }) {
           </select>
         </div>
       )}
+     {isLoading ? (
+          <Skeleton type="custom" />
+        ) : (
       <img src={content.img} alt="" />
+        
+        )}
       <div className="info">
         <img src={content.imgTitle} alt="" />
         <span className="desc">{content.desc}</span>
