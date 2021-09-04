@@ -6,10 +6,9 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("http://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg");
+    url("https://res.cloudinary.com/robinjoseph/image/upload/v1630753759/Movieland/3658597_o88otn.jpg");
   background-size: cover;
   position: relative;
-  
 
   .top {
     .wrapper {
@@ -21,6 +20,7 @@
       .logo {
         height: 50px;
         margin-top: 20px;
+        z-index: 1;
       }
     }
   }
@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
     color: white;
+    backdrop-filter: brightness(0.5);
 
     form {
       width: 300px;
@@ -62,7 +63,7 @@
       button {
         height: 40px;
         border-radius: 5px;
-        background-color: red;
+        background-color: #1f80e0;
         color: white;
         border: none;
         font-size: 18px;

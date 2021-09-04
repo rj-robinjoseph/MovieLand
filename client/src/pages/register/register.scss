@@ -5,7 +5,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+    url("https://res.cloudinary.com/robinjoseph/image/upload/v1630753759/Movieland/3658597_o88otn.jpg");
   background-size: cover;
 
   .top {
@@ -14,6 +14,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      backdrop-filter: brightness(0.5);
 
       .logo {
         height: 50px;
@@ -21,7 +22,7 @@
       }
 
       .loginButton {
-        background-color: red;
+        background-color: #1f80e0;
         border: none;
         color: white;
         border-radius: 5px;
@@ -43,6 +44,7 @@
       align-items: center;
       justify-content: center;
       color: white;
+      backdrop-filter: brightness(0.5);
 
       h1 {
         font-size: 50px;
@@ -75,7 +77,7 @@
         .registerButton {
           flex: 3;
           height: 100%;
-          background-color: red;
+          background-color: #1be07f;
           border: none;
           color: white;
           font-size: 22px;
