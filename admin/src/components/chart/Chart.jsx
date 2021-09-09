@@ -16,9 +16,9 @@ export default function Chart({ title, data, dataKey, grid }) {
       <ResponsiveContainer width="100%" aspect={4 / 1}>
         <LineChart data={data}>
           <XAxis dataKey="name" stroke="#5550bd" />
-          <Line type="monotone" dataKey={dataKey} stroke="#5550bd" />
+          <Line type="monotone" dataKey={dataKey} stroke="#0C2387" />
           <Tooltip />
-          {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
+          {grid && <CartesianGrid stroke="#8a8a8a8d" strokeDasharray="5 5" />}
         </LineChart>
       </ResponsiveContainer>
     </div>

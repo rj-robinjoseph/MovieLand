@@ -15,7 +15,8 @@ export default function Register() {
   const passwordRef = useRef()
   const usernameRef = useRef()
 
-  const handleStart = () => {
+  const handleStart = (e) => {
+    e.preventDefault()
     setEmail(emailRef.current.value)
   }
   const handleFinish = async (e) => {
@@ -27,6 +28,8 @@ export default function Register() {
       history.push("/login")
     } catch (err) {}
   }
+
+  
   return (
     <div className="register">
       <div className="top">
@@ -51,15 +54,15 @@ export default function Register() {
           </p>
           {!email ? (
             <div className="input">
-              <input type="email" placeholder="email address" ref={emailRef} />
+              <input type="email" placeholder="Email address" ref={emailRef} />
               <button className="registerButton" onClick={handleStart}>
                 Get Started
               </button>
             </div>
           ) : (
             <form className="input">
-              <input type="username" placeholder="username" ref={usernameRef} />
-              <input type="password" placeholder="password" ref={passwordRef} />
+              <input type="username" placeholder="username" ref={usernameRef} required/>
+              <input type="password" placeholder="password" minLength="6" ref={passwordRef} required/>
               <button className="registerButton" onClick={handleFinish}>
                 Start
               </button>

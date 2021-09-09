@@ -26,12 +26,11 @@ export default function Login() {
 
           <form id="login" method="post" action="#" className="form1">
      
-
               <input 
               className="un"
                type="text" 
                placeholder="Email" 
-               required="required"
+               required
                align="center"
                onChange={(e) => setEmail(e.target.value)}
               />
@@ -40,7 +39,8 @@ export default function Login() {
               className="pass"
                type="password" 
                placeholder="Password" 
-               required="required" 
+               required
+               minLength="6"
                align="center"
                onChange={(e) => setPassword(e.target.value)}
               />

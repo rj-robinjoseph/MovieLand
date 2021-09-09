@@ -39,7 +39,7 @@ export default function Featured({ type, setGenre }) {
             id="genre"
             onChange={(e) => setGenre(e.target.value)}
           >
-            <option>Genre</option>
+            <option>Genre / Languages</option>
             <option value="adventure">Adventure</option>
             <option value="action">Action</option>
             <option value="comedy">Comedy</option>
@@ -73,10 +73,10 @@ export default function Featured({ type, setGenre }) {
             <span>Play</span>
           </button>
         </Link>
-          <button className="more">
+          {/* <button className="more">
             <InfoOutlined />
             <span>Info</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

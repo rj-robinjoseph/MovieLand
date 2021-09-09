@@ -30,13 +30,13 @@ const Navbar = () => {
           <Link to="/movies" className="link">
           <span className="navbarmainlinks">Movies</span>
           </Link>
-          <span>New and Popular</span>
+          <span>Upcoming</span>
           <span>My List</span>
         </div>
         <div className="right">
-          <Search className="icon" />
+          {/* <Search className="icon" />
           <span>KID</span>
-          <Notifications className="icon" />
+          <Notifications className="icon" /> */}
           <img
             src={user.profilePic || "https://res.cloudinary.com/robinjoseph/image/upload/v1629368620/Movieland/1bdc9a33850498.56ba69ac2ba5b_wzbbxh.png"}
             alt=""
