@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./authContext/AuthContext";
+import Upcoming from "./pages/upcoming/Upcoming";
 
 const App = () => {
   const { user } = useContext(AuthContext);
@@ -36,6 +37,9 @@ const App = () => {
             </Route>
             <Route path="/watch">
               <Watch />
+            </Route>
+            <Route path="/upcoming">
+              <Upcoming />
             </Route>
           </>
           )}

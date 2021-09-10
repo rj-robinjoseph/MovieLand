@@ -1,0 +1,55 @@
+@import "../../app.scss";
+
+.upcoming {
+  background: linear-gradient(rgba(0, 0, 0, 0.744), rgba(0, 0, 0, 0.744)),
+    url("https://unsplash.com/photos/wMkaMXTJjlQ/download?force=true&w=1920");
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+.movies {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto auto;
+
+  &:nth-child(1) {
+    height: 68vh;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  .heading {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+
+  img {
+    width: 240px;
+    height: 360px;
+    margin-top: 150px;
+    margin-bottom: -100px;
+    padding: 0 10px;
+
+    @include tablet {
+      width: 235px;
+    }
+    @include mobile {
+      width: 220px;
+    }
+  }
+}
