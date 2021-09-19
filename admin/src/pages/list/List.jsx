@@ -58,7 +58,7 @@ export default function List() {
               <span className="productInfoValue">{listList._id}</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">genre:</span>
+              <span className="productInfoKey">Genre / Lang:</span>
               <span className="productInfoValue">{listList.genre}</span>
             </div>
             <div className="productInfoItem">
@@ -82,10 +82,10 @@ export default function List() {
             />
           </div>
           <div className="addProductItem">
-            <label>Genre</label>
+            <label>Genre / Language</label>
             <input
               type="text"
-              placeholder="action"
+              placeholder="Genre / Languages"
               name="genre"
               onChange={handleChange}
             />

@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link to="/upcoming" className="link">
           <span>Upcoming</span>
           </Link>
-          <span>My List</span>
+          {/* <span>My List</span> */}
         </div>
         <div className="right">
           {/* <Search className="icon" />
@@ -47,7 +47,7 @@ const Navbar = () => {
             <ArrowDropDown className="icon" />
             <div className="options">
             <span>Hello, {user.username}</span>
-              <span>Settings</span>
+              {/* <span>Settings</span> */}
               <span onClick={()=>dispatch(logout())}>Logout</span>
             </div>
           </div>

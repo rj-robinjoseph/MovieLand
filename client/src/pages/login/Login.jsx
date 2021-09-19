@@ -32,7 +32,7 @@ export default function Login() {
           <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
           <button className="loginButton" onClick={handleLogin}>Sign In</button>
           <span>
-            New to Netflix? <Link to="/register" className="signup"><b>Sign up now.</b></Link>
+            New to MovieLand? <Link to="/register" className="signup"><b>Sign up now.</b></Link>
           </span>
           <small>
             This page is protected by Google reCAPTCHA to ensure you're not a
