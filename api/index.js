@@ -27,3 +27,6 @@ app.use("/api/lists", listRoute);
 app.listen(process.env.PORT || 8800, () => {
   console.log("Backend server is Running!");
 });
+
+// 4. Routes
+app.get("/", (req, res) => res.status(200).send("Hello"));
