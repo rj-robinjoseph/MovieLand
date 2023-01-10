@@ -6,7 +6,7 @@
 <br/>
 ![register](https://user-images.githubusercontent.com/48469274/134032196-0dda4442-68f3-4de5-a823-a6ec5a30b730.png)
 <br/>
-![Input](https://user-images.githubusercontent.com/48469274/134032220-19039583-4bf4-44b2-aef3-8b478c55cec0.png)
+
 
 
 
